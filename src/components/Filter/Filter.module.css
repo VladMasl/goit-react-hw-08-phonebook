@@ -1,0 +1,26 @@
+.label {
+  font-weight: 700;
+  font-family: Dancing Script;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+  font-size: 38px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 12px 12px 2px 1px rgba(80, 59, 1, 0.517);
+  background-color: rgba(255, 145, 0, 0.342);
+  border: 2px solid rgba(233, 47, 47, 0.486);
+  color: rgb(99, 73, 2);
+}
+
+.input {
+  width: 350px;
+  height: 20px;
+  padding: 4px;
+  margin: 10px;
+
+  border-radius: 4px;
+  border: 2px solid rgba(240, 50, 50, 0.575);
+}

@@ -1,38 +1,56 @@
-import { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
-import ContactForm from './ContactForm/ContactForm';
-import ContactList from './ContactList/ContactList';
-import Filter from './Filter/Filter';
-import { getContacts } from 'redux/contacts/contactOperations';
-import { getItems } from '../redux/contacts/contactsSelrctor';
+import { lazy, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { Route, Routes, Navigate } from 'react-router-dom';
+import SharedLayout from './SharedLayout/SharedLayout';
+import { getCurrentUser } from '../redux/registration/authOperations';
+import PrivateRoute from './PrivateRoute';
+import PublicRoute from './PublicRoute';
 import s from '../components/App.module.css';
 
+const LogInPage = lazy(() => import('pages/logInPage'));
+const RegisterPage = lazy(() => import('pages/RegisterPage'));
+const ContactsPage = lazy(() => import('pages/ContactsPage'));
+
 function App() {
-  const contacts = useSelector(getItems);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getContacts());
+    dispatch(getCurrentUser());
   }, [dispatch]);
-
   return (
     <div className={s.decor}>
-      <h1 className={s.title}>Phonebook📱</h1>
-      <ContactForm />
-      {contacts.length === 0 ? (
-        <h2 className={s.title}>
-          You have no records☝
-          <br />
-          Enter the number and name☝
-        </h2>
-      ) : (
-        <>
-          <h2 className={s.title}>Contacts: {contacts.length}</h2>
-          <Filter />
-          <ContactList />
-        </>
-      )}
+      <Routes>
+        <Route path="/" element={<SharedLayout />}>
+          <Route
+            index
+            path="contacts"
+            element={
+              <PrivateRoute restricted>
+                <ContactsPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="register"
+            element={
+              <PublicRoute restricted>
+                <RegisterPage />
+              </PublicRoute>
+            }
+          />
+          <Route
+            path="login"
+            element={
+              <PublicRoute restricted>
+                <LogInPage />
+              </PublicRoute>
+            }
+          />
+        </Route>
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
     </div>
   );
 }
+
 export default App;

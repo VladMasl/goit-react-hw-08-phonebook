@@ -1,0 +1,27 @@
+.logout {
+  display: flex;
+  background-color: rgba(247, 193, 112, 0.734);
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+  border-bottom: 2px solid darkgoldenrod;
+}
+
+.tex {
+  margin-right: 40px;
+}
+
+.btn {
+  width: 120px;
+  height: 50px;
+  margin-right: 20px;
+  border-radius: 8px;
+  font-size: 20px;
+  border: 2px solid goldenrod;
+  background-color: rgba(210, 105, 30, 0.67);
+}
+
+.btn:hover {
+  color: aliceblue;
+  background-color: coral;
+}

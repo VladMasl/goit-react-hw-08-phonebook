@@ -6,7 +6,6 @@ import {
   getContacts,
 } from '../../redux/contacts/contactOperations';
 import PropTypes from 'prop-types';
-
 import s from './ContactList.module.css';
 
 const ContactList = () => {
@@ -16,14 +15,14 @@ const ContactList = () => {
   useEffect(() => {
     dispatch(getContacts());
     // eslint-disable-next-line
-  }, []);
+  }, [deleteContacts()]);
 
   return (
     <ul className={s.list}>
-      {contacts.map(({ name, phone, id }) => (
+      {contacts.map(({ name, number, id }) => (
         <li key={id} className={s.item}>
           <span className={s.span}>{name}:</span>
-          <span>{phone}</span>
+          <span>{number}</span>
           <button
             className={s.btn}
             type="button"

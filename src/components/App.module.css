@@ -1,10 +1,10 @@
 .decor {
-
+  min-height: 500px;
   max-width: 600px ;
   display: flex;
   margin: 62px auto;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-size: 20px;
   color: #010101;
@@ -14,13 +14,4 @@
   background-color: rgba(117, 18, 1, 0.2);
 }
 
-.title{
-  font-family: Dancing Script;
-  font-size: 50px;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 12px 12px 2px 1px rgba(80, 59, 1, 0.517);
-  background-color: rgb(232, 168, 129);
-  border: 8px solid rgb(197, 111, 50);
-  
-}
+

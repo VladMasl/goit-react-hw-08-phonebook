@@ -1,0 +1,10 @@
+.title{
+    font-family: Dancing Script;
+    font-size: 50px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 12px 12px 2px 1px rgba(80, 59, 1, 0.517);
+    background-color: rgb(232, 168, 129);
+    border: 8px solid rgb(197, 111, 50);
+    
+  }

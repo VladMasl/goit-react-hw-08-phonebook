@@ -3,7 +3,7 @@ import {
   getContactsApi,
   addContactsApi,
   deleteContactsApi,
-} from '../../resource/moskApi';
+} from '../../resource/swaggerApi';
 
 export const getContacts = createAsyncThunk(
   'getContacts',

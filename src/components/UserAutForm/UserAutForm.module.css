@@ -1,0 +1,48 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    border-radius: 10px;
+    margin-top: 80px;
+    padding: 15px;
+    box-shadow: 12px 12px 2px 1px rgba(80, 59, 1, 0.517);
+    background-color: rgba(255, 145, 0, 0.342);
+    border: 2px solid rgba(233, 47, 47, 0.486);
+  }
+  
+  .label {
+    font-family: Dancing Script;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+    color: rgb(99, 73, 2);
+    font-size: 29px;
+    margin-bottom: 10px;
+  }
+  
+  .input {
+    width: 350px;
+    height: 20px;
+    padding: 4px;
+  
+    border-radius: 4px;
+    border: 2px solid rgba(240, 50, 50, 0.575);
+  }
+  
+  .btn {
+    width: 200px;
+    height: 30px;
+    padding: 4px;
+    font-size: 18px;
+    border-radius: 7px;
+    margin: 0 auto;
+    cursor: pointer;
+    color: rgb(117, 18, 1);
+    background-color: rgb(219, 86, 86);
+    border: 2px solid rgba(240, 50, 50, 0.575);
+  }
+  
+  .btn:hover {
+    background-color: crimson;
+    color: aliceblue;
+  }

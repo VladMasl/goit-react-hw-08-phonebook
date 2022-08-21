@@ -1,4 +1,4 @@
-import { NavLink,useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import s from './AuthNavigation.module.css';
 
 const AuthNavigation = () => {
@@ -16,7 +16,7 @@ const AuthNavigation = () => {
           </NavLink>
         </nav>
       </header>
-      
+      <h1 className={s.title}>Log in to your account or register</h1>
     </>
   );
 };

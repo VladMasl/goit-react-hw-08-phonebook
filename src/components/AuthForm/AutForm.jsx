@@ -1,10 +1,10 @@
-import {  useDispatch  } from 'react-redux';
-import { useState} from 'react';
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
 import { register } from '../../redux/registration/authOperations';
 import s from './AuthForm.module.css';
 
 function AuthForm() {
-  const dispatch =  useDispatch();
+  const dispatch = useDispatch();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -28,7 +28,7 @@ function AuthForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-     dispatch(register({ name, email, password }));
+    dispatch(register({ name, email, password }));
     resetForm();
   };
 

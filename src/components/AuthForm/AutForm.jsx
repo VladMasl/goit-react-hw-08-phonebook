@@ -73,7 +73,7 @@ function AuthForm() {
         </label>
 
         <button type="submit" className={s.btn}>
-          Sing in
+          Registr
         </button>
       </form>
     </>

@@ -58,7 +58,7 @@ function UserAutForm() {
         </label>
 
         <button type="submit" className={s.btn}>
-          registr
+        Sing in
         </button>
       </form>
     </>
